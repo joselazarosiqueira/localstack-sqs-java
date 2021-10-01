@@ -38,3 +38,24 @@ Para subir o container, utilize o comando abaixo:
 ```
 $ docker-compose up
 ```
+
+## Criando uma fila com o aws-cli
+Para testar se o SQS está funcionando, será necessário instalar o aws-cli, que é a interface de linha de comando da aws.
+
+Exemplo de como criar uma fila utilizando o endpoint local:
+
+```
+$ aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name teste
+```
+
+Exemplo de envio de uma mensagem para a fila:
+
+```
+$ aws --endpoint-url=http://localhost:4566 sqs send-message --queue-url http://localhost:4566/queue/teste --message-body "Mensagem de teste"
+```
+
+Exemplo de leitura de mensagens da fila:
+
+```
+$ aws --endpoint-url=http://localhost:4576 sqs receive-message --queue-url http://localhost:4576/queue/teste --max-number-of-messages 10
+```

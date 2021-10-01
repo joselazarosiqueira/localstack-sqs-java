@@ -16,7 +16,7 @@ public class SqsConsumerTest {
                 .endpointOverride(URI.create("http://localhost:4566"))
                 .build();
 
-        String queueUrl = "http://localhost:4566/queue/teste";
+        String queueUrl = "http://localhost:4566/000000000000/teste";
 
         ReceiveMessageRequest receiveMessageRequest = ReceiveMessageRequest.builder()
                 .queueUrl(queueUrl)
