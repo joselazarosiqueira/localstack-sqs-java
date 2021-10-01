@@ -57,5 +57,5 @@ $ aws --endpoint-url=http://localhost:4566 sqs send-message --queue-url http://l
 Exemplo de leitura de mensagens da fila:
 
 ```
-$ aws --endpoint-url=http://localhost:4576 sqs receive-message --queue-url http://localhost:4576/queue/teste --max-number-of-messages 10
+$ aws --endpoint-url=http://localhost:4566 sqs receive-message --queue-url http://localhost:4566/queue/teste --max-number-of-messages 10
 ```
